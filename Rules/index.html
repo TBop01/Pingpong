@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Buttons</title>
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Yrsa|Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <hr />
+    <button class="eightbit-btn eightbit-btn--proceed" onclick="playAudio('')" id="agreementButton">Agreement Pingpong</button>
+    <hr />
+    <button class="eightbit-btn eightbit-btn--reset" onclick="playAudio('audio1')" id="playButton">Press start</button>
+    <hr />
+    <!-- Audio elements -->
+    <audio id="audio1" src="https://www.td-dko.com/content/authoringtooldb/1389/0D281D81-00CB-7CEE-53EF-A3767F78C8F5.mp3" onended="playNextAudio()"></audio>
+    <audio id="audio2" src=""></audio>
+  </header>
+
+  <script>
+    function playAudio(audioId) {
+      var audio = document.getElementById(audioId);
+      audio.play();
+    }
+
+    function playNextAudio() {
+      var audio2 = document.getElementById('audio2');
+      audio2.play();
+    }
+  </script>
+</body>
+</html>

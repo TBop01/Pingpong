@@ -1,0 +1,239 @@
+/* Common styles for scoreboard */
+.scoreboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 500px;
+    border-radius: 20px;
+    margin: 0 auto; /* Center the scoreboard horizontally */
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.scoreboard__name,
+.scoreboard__score {
+    padding: 10px;
+    text-align: center;
+}
+
+.scoreboard__name {
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.scoreboard__name--one {
+    color: #f6ff00;
+    font-size: 2em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+}
+
+.scoreboard__name--two {
+    color: #ffffff;
+    font-size: 2em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+}
+
+.scoreboard__score {
+    font-size: 5em;
+    color: #fff; /* Change this to your desired color */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+}
+
+.scoreboard__controls {
+    display: flex;
+}
+
+.scoreboard__control-button {
+    flex-grow: 1;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-size: 3em;
+}
+
+.scoreboard__control-button:hover {
+    background: #ddd;
+}
+
+.scoreboard__control-button:active {
+    background: #ccc;
+}
+
+/* Animation for flashing text */
+@keyframes flash {
+    0% { color: yellow; }
+    50% { color: red; }
+    100% { color: yellow; }
+}
+
+/* Style for the winning message */
+.winner-message {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(0, 8, 255); /* Initial color */
+    text-align: center;
+    margin-top: 200px; /* Adjust spacing from the top */
+    margin-bottom: 40px; /* Add margin at the bottom */
+    animation: flash 1s infinite; /* Apply the flashing animation */
+}
+
+/* Add this CSS to style the Play Again button */
+.play-again-button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    background-color: #92CD41; /* Lighter green background color */
+    border: 2px solid #050505; /* Black border */
+    padding: 10px 20px;
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 40px; /* Add margin at the bottom */
+    cursor: pointer;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black shadow */
+}
+
+/* Style for the Generate Statement button */
+.generate-statement {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #92CD41; /* Green background */
+    color: #ffffff; /* White text */
+    border: 1px solid #000;
+    border-radius: 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: calc(35vh + 100px); /* Adjust to position the button higher */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flash 2s infinite; /* Apply the flashing animation */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+}
+
+/* Style for the Generate Statement Box */
+.statement-box {
+    position: fixed;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    color: #ffe100; /* White text */
+    width: 450px;
+    height: 220px;
+    padding: 20px;
+    border: 2px solid #030303; /* White border */
+    border-radius: 20px;
+    text-align: center;
+}
+
+.statement-text {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2em;
+}
+
+/* Animation for Generate Statement flashing button */
+@keyframes flash {
+    0% { background-color: #92CD41; } /* Initial color */
+    50% { background-color: #fff; } /* Flash to white */
+    100% { background-color: #fbff00; } /* Back to initial color */
+}
+
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color:transparent; /* Set a light background color */
+    padding: 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+}
+
+/* Add this CSS to style the Player One and Player Two buttons */
+.player-button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; /* White text color */
+    border: 2px solid #050505; /* Black border */
+    padding: 10px 20px;
+    margin-top: 20px; /* Adjust as needed */
+    cursor: pointer;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto; /* Center the button horizontally */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black shadow */
+}
+
+/* Style for Player One (Blue) button */
+.player-one {
+    background-color: rgb(0, 0, 255); /* Blue color */
+    border: 2px solid rgb(255, 255, 255); /* Black border */
+}
+
+/* Style for Player Two (Red) button */
+.player-two {
+    background-color: rgb(255, 0, 0); /* Red color */
+    border: 2px solid rgb(255, 255, 255); /* Black border */
+}
+
+/* CSS styles for the sentence displayed below Player One button */
+.player-one-sentence {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom position as needed */
+    left: 30%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    color: #ff0000; /* Red color for Player One sentence */
+}
+
+/* CSS styles for the sentence displayed below Player Two button */
+.player-two-sentence {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5em;
+    position: fixed;
+    bottom: 50px; /* Adjust the bottom position as needed */
+    left: 60%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    color: #0004ff; /* Blue color for Player Two sentence */
+}
+
+/* Style for the box below Player One button */
+.box-player-one {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.25em;
+    position: fixed;
+    bottom: 40px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px; /* Rounded corners for Player One box */
+    background-color: transparent; /* Transparent fill */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style for the box below Player Two button */
+.box-player-two {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.25em;
+    position: absolute;
+    bottom: 40px;
+    left: 70%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 15px; /* Rounded corners for Player Two box */
+    background-color: transparent; /* Transparent fill */
+    color: #ffffff; /* White text color */
+    padding: 10px;
+    text-align: center;
+
+    
+}
+
